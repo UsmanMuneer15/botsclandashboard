@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title> Dashboard</title>
+
+  <!-- Montserrat Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="grid-container">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="menu-icon" onclick="openSidebar()">
+        <span class="material-icons-outlined">menu</span>
+      </div>
+      <div class="header-left">
+
+        <span> <input type="text" placeholder="search..." style=" height: 30px; padding-left: 6px;">
+        </span>
+      </div>
+      <div class="header-right">
+        <span class="material-icons-outlined marclas">settings</span>
+        <i class="fa fa-circle marclas2" style="font-size:30px;"></i>
+        <p class="time2">21:00 PM</p>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div class="sidebar-title">
+        <div class="sidebar-brand">
+
+          <span class="material-icons-outlined">account_circle</span>Recognation
+          <h6>JobOnkiAdmin</h6>
+          <span class="dot"></span>
+        </div>
+        <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+      </div>
+
+      <ul class="sidebar-list">
+        <li class="sidebar-list-item">
+          <a href="#" target="">
+            <span class="material-icons-outlined">dashboard</span> Dashboard
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="#" target="">
+            <span class="material-icons-outlined">inventory_2</span> Products
+          </a>
+        </li>
+        <li class="sidebar-list-item">
+          <a href="#" target="">
+            <span class="material-icons-outlined">category</span> Categories
+          </a>
+        </li>
+
+        <li class="sidebar-list-item">
+          <a href="#" target="_blank">
+            <span class="material-icons-outlined">settings</span> Settings
+          </a>
+        </li>
+      </ul>
+    </aside>
+    <!-- End Sidebar -->
+
+    <!-- Main -->
+    <main class="main-container">
+      <div class="main-title">
+        <h2>DASHBOARD</h2>
+      </div>
+
+      <div class="main-cards">
+
+        <div class="card">
+          <div class="card-inner">
+            <h3>PRODUCTS</h3>
+            <span class="material-icons-outlined">inventory_2</span>
+          </div>
+          <h1>249</h1>
+        </div>
+
+        <div class="card">
+          <div class="card-inner">
+            <h3>AVG AGE</h3>
+            <span class='fas fa-hourglass-end' style='font-size:40px;color:white'></span>
+          </div>
+          <h1>59/125</h1>
+        </div>
+
+        <div class="card">
+          <div class="card-inner">
+            <h3>Total Visitor</h3>
+            <span class="material-icons-outlined">groups</span>
+          </div>
+          <h1>1500</h1>
+        </div>
+
+        <div class="card">
+          <div class="card-inner">
+            <h3>ALERTS</h3>
+            <span class="material-icons-outlined">notification_important</span>
+          </div>
+          <h1>56</h1>
+        </div>
+
+      </div>
+
+      <div class="charts">
+
+        <div class="charts-card">
+          <h2 class="chart-title">Analysis</h2>
+          <div id="bar-chart"></div>
+          <div class="iconss">
+            <i class='far fa-laugh-beam' style='font-size:90px;color:rgb(241,11,176)'></i>
+            <i class='far fa-laugh-beam' style='font-size:90px;color:#6ca8d7'></i>
+            <i class='far fa-sad-tear' style='font-size:90px;color:black'></i>
+          </div>
+          <div class="iconsss">
+            <p class="iconsss">45%</p>
+            <p class="iconsss">35%</p>
+            <p class="iconsss">20%</p>
+          </div>
+
+
+        </div>
+
+        <div class="charts-card">
+          <button>Last year</button>
+          <h2 class="chart-title">Purchase and Sales Orders</h2>
+          <div id="area-chart"></div>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="charts">
+        <div class="charts-card ">
+          <h2 class="chart-title">Statistics</h2>
+
+          <h1>Male vs Female</h1>
+          <div class="standard">
+            <i class="fa fa-male" style="font-size:70px;color:rgb(241,11,176) ">
+              <p class="standard1">45%</p>
+            </i>
+            <i class="fa fa-female" style="font-size:70px;color:#6ca8d7">
+              <p class="standard1">30%</p>
+            </i>
+            <div class="dot1">
+              <p class="textalighnn">03:05</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="charts-card">
+          <button>Last year</button>
+          <h2 class="chart-title">age group</h2>
+          <table class="tbd" style="border-style: inset;">
+            <tr>
+              <th>Crowed size</th>
+              <th>Video 1</th>
+              <th>Video 2</th>
+              <th>Totlal</th>
+            </tr>
+            <tr>
+              <td>1-2</td>
+              <td>21</td>
+              <td>2</td>
+              <td>23</td>
+            </tr>
+            <tr>
+              <td>1-2</td>
+              <td>21</td>
+              <td>2</td>
+              <td>23</td>
+            </tr>
+            <tr>
+              <td>1-2</td>
+              <td>21</td>
+              <td>2</td>
+              <td>23</td>
+            </tr>
+            <tr>
+              <td>1-2</td>
+              <td>21</td>
+              <td>2</td>
+              <td>23</td>
+            </tr>
+            <tr>
+              <td>1-2</td>
+              <td>21</td>
+              <td>2</td>
+              <td>23</td>
+            </tr>
+            <tr>
+              <td>1-2</td>
+              <td>21</td>
+              <td>2</td>
+              <td>23</td>
+            </tr>
+            <tr>
+              <td>1-2</td>
+              <td>21</td>
+              <td>2</td>
+              <td>23</td>
+            </tr>
+          </table>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="charts">
+
+        <div class="charts-card">
+
+          <div class="btn">+</div>
+          <h2 class="chart-title">Top 5 Products</h2>
+          <table class="tbd" style="border-style: outset;">
+            <tr>
+              <th>video1</th>
+              <th>1-100</th>
+              <th>100-200</th>
+              <th>200-300</th>
+              <th>100-200</th>
+              <th>200-300</th>
+            </tr>
+            <tr>
+              <td><strong>Casicion</strong></td>
+              <td>21</td>
+              <td>2</td>
+              <td>23</td>
+              <td>2</td>
+              <td>23</td>
+            </tr>
+            <tr>
+              <td><strong>black</strong></td>
+              <td>21</td>
+              <td>2</td>
+              <td>23</td>
+              <td>2</td>
+              <td>23</td>
+            </tr>
+            <tr>
+              <td><strong>serro</strong></td>
+              <td>21</td>
+              <td>2</td>
+              <td>23</td>
+              <td>2</td>
+              <td>23</td>
+            </tr>
+            <tr>
+              <td><strong>Haspanian</strong></td>
+              <td>21</td>
+              <td>2</td>
+              <td>23</td>
+              <td>2</td>
+              <td>23</td>
+            </tr>
+            <tr>
+              <td><strong>asian%</strong></td>
+              <td>21</td>
+              <td>2</td>
+              <td>23</td>
+              <td>2</td>
+              <td>23</td>
+            </tr>
+
+
+          </table>
+        </div>
+        <div class="charts-card ">
+
+          <h2 class="chart-title">Statistics</h2>
+          <canvas id="myChart" style="width:80%;max-width:456px"></canvas>
+          <label>video</label><input type="radio">
+          <label>video2</label><input type="radio">
+
+        </div>
+
+
+      </div>
+  </div>
+
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.5/apexcharts.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
